@@ -40,7 +40,6 @@ namespace MangoDbCoreApi_5._0.Controllers
         /// <returns></returns>
 
         [HttpPost]
-
         public async Task<IActionResult> CreateBookAsync(Book book)
         {
             var bookDetails = await _bookServices.CreateBookAsync(book);
@@ -72,7 +71,7 @@ namespace MangoDbCoreApi_5._0.Controllers
         [Route("{id}")]
         public async Task<IActionResult> DeleteBookAsync(string id)
         {
-            var BookDetails = await _bookServices.GetBookByIdAsync(id).ConfigureAwait(false);
+             await _bookServices.GetBookByIdAsync(id).ConfigureAwait(false);
             if (id == null)
             {
                 return NotFound();
