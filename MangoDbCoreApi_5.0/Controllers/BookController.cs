@@ -1,4 +1,5 @@
-﻿using MangoDbCoreApi_5._0.Models;
+﻿using MangoDbCoreApi_5._0.Configuration;
+using MangoDbCoreApi_5._0.Models;
 using MangoDbCoreApi_5._0.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc; 
@@ -20,6 +21,7 @@ namespace MangoDbCoreApi_5._0.Controllers
         }
 
         [HttpGet]
+        [TypeFilter(typeof(LogFilter), Arguments = new object[] { "Abc", "Xyz" })]
         public async Task<IActionResult> GetAllBooks()
         {
             return Ok(await _bookServices.GetAllBookAsync().ConfigureAwait(false));
