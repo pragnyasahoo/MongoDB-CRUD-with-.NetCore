@@ -19,6 +19,7 @@ namespace MongoDB_CRUD_with_.NetCore.Test
 
         private List<Book> book;
 
+        private Book books;
 
         [SetUp]
         public void Setup()
@@ -26,8 +27,6 @@ namespace MongoDB_CRUD_with_.NetCore.Test
             mockBookserive = new Mock<IBookServices>();
             bookController = new BookController(mockBookserive.Object);
             createBookStore();
-
-
         }
 
         [Test]
@@ -42,12 +41,25 @@ namespace MongoDB_CRUD_with_.NetCore.Test
             Assert.AreEqual(((List<Book>)BookCount).Count, book.Count);
         }
 
+        [Test]
+        [TestCase("1")]
+        public void test_GetBookById(string id)
+        {
+            mockBookserive.Setup(x => x.GetBookByIdAsync(id)).ReturnsAsync(books);
+            var bookDetails= bookController.GetBookById(id);
+            mockBookserive.Verify(x=>x.GetBookByIdAsync(id),Times.Once());
+            var okResult= (ObjectResult)((bookDetails).Result);
+            var BookCount= ((ObjectResult)(bookDetails.Result)).Value;
+            //Assert.Equals ((BookCount.c).CompareTo(book.Count));
+        }
+
         private List<Book> createBookStore()
         {
             book = new List<Book>()
             {
                 new Book
                 {
+                     Id = "1",
                      author = "shree",
                      bookName="My stroy",
                      category="stroy",
@@ -57,6 +69,7 @@ namespace MongoDB_CRUD_with_.NetCore.Test
 
                  new Book
                 {
+                     Id = "2",
                      author = "shree1",
                      bookName="My stroy1",
                      category="stroy1",
@@ -65,6 +78,7 @@ namespace MongoDB_CRUD_with_.NetCore.Test
                 },
                   new Book
                 {
+                      Id = "3",
                      author = "shree2",
                      bookName="My stroy2",
                      category="stroy2",

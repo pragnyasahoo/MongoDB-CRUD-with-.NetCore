@@ -29,7 +29,7 @@ namespace MongoDB_CRUD_with_.NetCore_XUnit.Test
         public async void Get_ActionExecute_ReturnOkResultWithBookList()
         {
             mockBookserive.Setup(x => x.GetAllBookAsync()).ReturnsAsync(book);
-            var bookDetails = await bookController.GetAllBooks();
+            var bookDetails = await bookController.GetAllBooks();            
 
             mockBookserive.Verify(x => x.GetAllBookAsync(), Times.Once);
             var resultType = Assert.IsType<OkObjectResult>(bookDetails);
