@@ -2,22 +2,46 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
+    "id": {
+      "type": "string"
+    },
     "bookName": {
       "type": "string"
     },
-    "price": {
+    "bookPrice": {
       "type": "integer"
     },
     "category": {
       "type": "string"
     },
     "author": {
-      "type": "string"
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "age": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "firstName",
+        "lastName",
+        "age",
+        "location"
+      ]
     }
   },
   "required": [
+    "id",
     "bookName",
-    "price",
+    "bookPrice",
     "category",
     "author"
   ]

@@ -18,8 +18,8 @@ namespace MangoDbCoreApi_5._0.Services
 
         public Task<Book> CreateBookAsync(Book book)
         {
-            return bookRepository.CreateAsync(book);
-         }
+           return bookRepository.CreateAsync(book);            
+        }
 
         public Task DeleteBookAsync(string id)
         {

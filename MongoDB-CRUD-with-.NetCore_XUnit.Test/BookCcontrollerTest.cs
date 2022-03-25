@@ -14,6 +14,9 @@ namespace MongoDB_CRUD_with_.NetCore_XUnit.Test
 
         private readonly Mock<IBookServices> mockBookserive;
 
+        //private readonly Mock<IJsonSchemaValidator> mockBookserive;
+
+
         private readonly BookController bookController;
 
         private List<Book> book;

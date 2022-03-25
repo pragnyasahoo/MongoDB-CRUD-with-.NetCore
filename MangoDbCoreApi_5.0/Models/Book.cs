@@ -10,7 +10,8 @@ namespace MangoDbCoreApi_5._0.Models
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]    
         public string Id { get; set; }
-        [BsonElement("Name")]
+
+        [BsonElement("name")]
         public string bookName { get; set; }
 
         [BsonElement("price")]
@@ -18,7 +19,7 @@ namespace MangoDbCoreApi_5._0.Models
 
         public string category { get; set; }
 
-        public string author { get; set; }
+        public Author author { get; set; }
     }
 
 }   

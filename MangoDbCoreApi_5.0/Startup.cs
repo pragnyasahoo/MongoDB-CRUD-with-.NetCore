@@ -2,6 +2,8 @@ using MangoDbCoreApi_5._0.Models;
 using MangoDbCoreApi_5._0.Models.Abstract;
 using MangoDbCoreApi_5._0.Repository;
 using MangoDbCoreApi_5._0.Services;
+using MangoDbCoreApi_5._0.Utility;
+using MangoDbCoreApi_5._0.Utility.Implement;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting; 
 using Microsoft.Extensions.Configuration;
@@ -35,6 +37,7 @@ namespace MangoDbCoreApi_5._0
             services.AddSingleton<IDbConfiguration>(sp => sp.GetRequiredService<IOptions<DbConfiguration>>().Value);
             services.AddScoped<IBookRepository, BookRepository>();
             services.AddScoped<IBookServices, BookServices>();
+            services.AddScoped<IJsonSchemaValidator, JsonSchemaValidator>();
             //services.AddSingleton<BookServices>(); //singleton   
 
             services.AddControllers(); 

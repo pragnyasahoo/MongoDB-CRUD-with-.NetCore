@@ -6,6 +6,6 @@
         public string bookName { get; set; }
         public decimal BookPrice { get; set; }
         public string category { get; set; }
-        public string author { get; set; }
+        public Author author { get; set; }
     }
 }
