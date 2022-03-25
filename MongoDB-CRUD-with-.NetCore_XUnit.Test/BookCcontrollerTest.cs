@@ -46,7 +46,15 @@ namespace MongoDB_CRUD_with_.NetCore_XUnit.Test
             {
                 new Book
                 {
-                     author = "shree",
+                     Id = "1",
+                     author = new Author
+                     {
+                         FirstName ="om",
+                         LastName ="sah",
+                         Age =31,
+                         Location="chennai"
+                     },
+
                      bookName="My stroy",
                      category="stroy",
                      BookPrice =222
@@ -55,7 +63,14 @@ namespace MongoDB_CRUD_with_.NetCore_XUnit.Test
 
                  new Book
                 {
-                     author = "shree1",
+                     Id = "2",
+                     author = new Author
+                     {
+                         FirstName ="om1",
+                         LastName ="sah1",
+                         Age =32,
+                         Location="chennai1"
+                     },
                      bookName="My stroy1",
                      category="stroy1",
                      BookPrice =2221
@@ -63,12 +78,18 @@ namespace MongoDB_CRUD_with_.NetCore_XUnit.Test
                 },
                   new Book
                 {
-                     author = "shree2",
+                      Id = "3",
+                      author = new Author
+                     {
+                         FirstName ="om2",
+                         LastName ="sah2",
+                         Age =30,
+                         Location="chennai2"
+                     },
                      bookName="My stroy2",
                      category="stroy2",
                      BookPrice =2222
-
-                },
+                     }
             };
             return book;
         }

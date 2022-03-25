@@ -13,20 +13,18 @@ namespace MongoDB_CRUD_with_.NetCore.Test
     public class BookCcontrollerTest
     {
 
-        private   Mock<IBookServices> mockBookserive;
+        private Mock<IBookServices> mockBookserive;
 
-        private   BookController bookController;
+        private BookController bookController;
 
-        private List<Book> book;
-
-        private Book books;
+        private List<Book> book; 
 
         [SetUp]
         public void Setup()
         {
             mockBookserive = new Mock<IBookServices>();
             bookController = new BookController(mockBookserive.Object);
-            createBookStore();
+           book = createBookStore();
         }
 
         [Test]
@@ -37,30 +35,39 @@ namespace MongoDB_CRUD_with_.NetCore.Test
             var bookDetails = bookController.GetAllBooks();
             mockBookserive.Verify(x => x.GetAllBookAsync(), Times.Once());
             var okResult = (ObjectResult)((bookDetails).Result);
-            var BookCount = ((ObjectResult)((bookDetails).Result)).Value ;
+            var BookCount = ((ObjectResult)((bookDetails).Result)).Value;
             Assert.AreEqual(((List<Book>)BookCount).Count, book.Count);
         }
 
         [Test]
-        [TestCase("1")]
+        [TestCase("3ef9e33e1c4d3f78c4e72c1f")]
         public void test_GetBookById(string id)
         {
-            mockBookserive.Setup(x => x.GetBookByIdAsync(id)).ReturnsAsync(books);
-            var bookDetails= bookController.GetBookById(id);
-            mockBookserive.Verify(x=>x.GetBookByIdAsync(id),Times.Once());
-            var okResult= (ObjectResult)((bookDetails).Result);
-            var BookCount= ((ObjectResult)(bookDetails.Result)).Value;
-            //Assert.Equals ((BookCount.c).CompareTo(book.Count));
+            //Book book = null;
+            var bookDetails = book.Find(x => x.Id.Equals(id));
+            mockBookserive.Setup(x => x.GetBookByIdAsync(id)).ReturnsAsync(bookDetails);
+            var result = bookController.GetBookById(id);
+            mockBookserive.Verify(x => x.GetBookByIdAsync(id), Times.Once());
+            var okResult = (ObjectResult)((result).Result);
+            var BookCount = ((ObjectResult)(result.Result)).Value;
+            
         }
 
-        private List<Book> createBookStore()
+        private  List<Book> createBookStore()
         {
             book = new List<Book>()
             {
                 new Book
                 {
-                     Id = "1",
-                     author = "shree",
+                     Id = "3ef9e33e1c4d3f78c4e72c1f",
+                     author = new Author
+                     {
+                         FirstName ="om",
+                         LastName ="sah",
+                         Age =31,
+                         Location="chennai"
+                     },
+
                      bookName="My stroy",
                      category="stroy",
                      BookPrice =222
@@ -69,8 +76,14 @@ namespace MongoDB_CRUD_with_.NetCore.Test
 
                  new Book
                 {
-                     Id = "2",
-                     author = "shree1",
+                     Id = "5ef9e45e1c4d3f78c4e72c1f",
+                     author = new Author
+                     {
+                         FirstName ="om1",
+                         LastName ="sah1",
+                         Age =32,
+                         Location="chennai1"
+                     },
                      bookName="My stroy1",
                      category="stroy1",
                      BookPrice =2221
@@ -78,13 +91,19 @@ namespace MongoDB_CRUD_with_.NetCore.Test
                 },
                   new Book
                 {
-                      Id = "3",
-                     author = "shree2",
+                      Id = "4ef9e33e3c4d5f78c4e72c1f",
+                      author = new Author
+                     {
+                         FirstName ="om2",
+                         LastName ="sah2",
+                         Age =30,
+                         Location="chennai2"
+                     },
                      bookName="My stroy2",
                      category="stroy2",
                      BookPrice =2222
+                     }
 
-                },
             };
             return book;
         }

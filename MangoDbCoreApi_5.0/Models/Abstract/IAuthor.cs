@@ -6,7 +6,7 @@
 
         string LastName { get; set; }
 
-        string Age { get; set; }
+        int Age { get; set; }
 
         string Location { get; set; }
     }

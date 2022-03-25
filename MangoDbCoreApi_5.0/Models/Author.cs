@@ -15,7 +15,7 @@ namespace MangoDbCoreApi_5._0.Models
         public  string LastName { get; set; }
 
         [BsonElement("age")]
-        public string Age { get; set; }
+        public int Age { get; set; }
 
         [BsonRequired]
         public string Location { get; set; }
