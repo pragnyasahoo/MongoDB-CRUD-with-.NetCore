@@ -1,4 +1,4 @@
-﻿using MangoDbCoreApi_5._0.Utility.Implement;
+﻿using MangoDbCoreApi_5.Utility.Implement;
 using Newtonsoft.Json.Linq;
 using NJsonSchema;
 using System;
@@ -7,7 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks; 
 
-namespace MangoDbCoreApi_5._0.Utility
+namespace MangoDbCoreApi_5.Utility
 {
     public class JsonSchemaValidator : IJsonSchemaValidator
     {

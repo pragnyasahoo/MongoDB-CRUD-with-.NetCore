@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
 
-namespace MangoDbCoreApi_5._0.Configuration
+namespace MangoDbCoreApi_5.Configuration
 {
     public class LogFilter :  ActionFilterAttribute
     {

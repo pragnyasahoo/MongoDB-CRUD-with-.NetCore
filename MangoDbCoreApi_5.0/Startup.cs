@@ -1,9 +1,9 @@
-using MangoDbCoreApi_5._0.Models;
-using MangoDbCoreApi_5._0.Models.Abstract;
-using MangoDbCoreApi_5._0.Repository;
-using MangoDbCoreApi_5._0.Services;
-using MangoDbCoreApi_5._0.Utility;
-using MangoDbCoreApi_5._0.Utility.Implement;
+using MangoDbCoreApi_5.Models;
+using MangoDbCoreApi_5.Models.Abstract;
+using MangoDbCoreApi_5.Repository;
+using MangoDbCoreApi_5.Services;
+using MangoDbCoreApi_5.Utility;
+using MangoDbCoreApi_5.Utility.Implement;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting; 
 using Microsoft.Extensions.Configuration;
@@ -12,7 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 
-namespace MangoDbCoreApi_5._0
+namespace MangoDbCoreApi_5
 {
     public class Startup
     {

@@ -1,12 +1,12 @@
-﻿using MangoDbCoreApi_5._0.Models;
-using MangoDbCoreApi_5._0.Models.Abstract;
-using MangoDbCoreApi_5._0.Repository;
+﻿using MangoDbCoreApi_5.Models;
+using MangoDbCoreApi_5.Models.Abstract;
+using MangoDbCoreApi_5.Repository;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace MangoDbCoreApi_5._0.Services
+namespace MangoDbCoreApi_5.Services
 {
     public class BookServices:IBookServices
     { 

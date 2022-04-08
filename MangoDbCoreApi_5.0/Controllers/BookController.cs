@@ -1,7 +1,7 @@
-﻿using MangoDbCoreApi_5._0.Configuration;
-using MangoDbCoreApi_5._0.Models;
-using MangoDbCoreApi_5._0.Services;
-using MangoDbCoreApi_5._0.Utility.Implement;
+﻿using MangoDbCoreApi_5.Configuration;
+using MangoDbCoreApi_5.Models;
+using MangoDbCoreApi_5.Services;
+using MangoDbCoreApi_5.Utility.Implement;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
@@ -11,7 +11,7 @@ using System.Net;
 using System.Net.Mime;
 using System.Threading.Tasks;
 
-namespace MangoDbCoreApi_5._0.Controllers
+namespace MangoDbCoreApi_5.Controllers
 {
     [Route("api/[controller]/")]
     [ApiController]

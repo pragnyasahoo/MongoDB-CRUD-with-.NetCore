@@ -1,6 +1,6 @@
-﻿using MangoDbCoreApi_5._0.Models.Abstract;
+﻿using MangoDbCoreApi_5.Models.Abstract;
 
-namespace MangoDbCoreApi_5._0.Models
+namespace MangoDbCoreApi_5.Models
 {
     public class DbConfiguration: IDbConfiguration
     {

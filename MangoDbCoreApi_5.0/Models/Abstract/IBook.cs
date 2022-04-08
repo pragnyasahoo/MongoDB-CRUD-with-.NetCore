@@ -1,4 +1,4 @@
-﻿namespace MangoDbCoreApi_5._0.Models.Abstract
+﻿namespace MangoDbCoreApi_5.Models.Abstract
 {
     public interface IBook
     {

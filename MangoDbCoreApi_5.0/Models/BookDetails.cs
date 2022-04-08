@@ -1,6 +1,6 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 
-namespace MangoDbCoreApi_5._0.Models
+namespace MangoDbCoreApi_5.Models
 {
     public class BookDetails
     {

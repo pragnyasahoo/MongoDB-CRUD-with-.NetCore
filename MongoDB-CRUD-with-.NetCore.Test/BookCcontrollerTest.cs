@@ -1,6 +1,6 @@
-using MangoDbCoreApi_5._0.Controllers;
-using MangoDbCoreApi_5._0.Models;
-using MangoDbCoreApi_5._0.Services;
+using MangoDbCoreApi_5.Controllers;
+using MangoDbCoreApi_5.Models;
+using MangoDbCoreApi_5.Services;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using NUnit.Framework;

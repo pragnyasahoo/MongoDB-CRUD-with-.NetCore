@@ -1,8 +1,8 @@
-﻿using MangoDbCoreApi_5._0.Models;
+﻿using MangoDbCoreApi_5.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace MangoDbCoreApi_5._0.Repository
+namespace MangoDbCoreApi_5.Repository
 {
     public interface IBookRepository
     {

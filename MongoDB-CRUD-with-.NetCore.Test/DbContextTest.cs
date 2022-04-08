@@ -1,5 +1,5 @@
-﻿using MangoDbCoreApi_5._0.Models;
-using MangoDbCoreApi_5._0.Repository;
+﻿using MangoDbCoreApi_5.Models;
+using MangoDbCoreApi_5.Repository;
 using Moq;
 using NUnit.Framework;
 using System;

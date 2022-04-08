@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MangoDbCoreApi_5.0\MongoDB-CRUD-with-.NetCore.csproj" />
+    <ProjectReference Include="..\MangoDbCoreApi_5.0\MangoDbCoreApi_5.csproj" />
   </ItemGroup>
 
 </Project>

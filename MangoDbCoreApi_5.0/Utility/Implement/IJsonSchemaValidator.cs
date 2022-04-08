@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace MangoDbCoreApi_5._0.Utility.Implement
+namespace MangoDbCoreApi_5.Utility.Implement
 {
     public interface IJsonSchemaValidator
     {

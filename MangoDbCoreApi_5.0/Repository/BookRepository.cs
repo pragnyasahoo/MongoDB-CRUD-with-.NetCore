@@ -1,10 +1,10 @@
-﻿using MangoDbCoreApi_5._0.Models;
+﻿using MangoDbCoreApi_5.Models;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using MongoDB.Driver;
-using MangoDbCoreApi_5._0.Models.Abstract;
+using MangoDbCoreApi_5.Models.Abstract;
 
-namespace MangoDbCoreApi_5._0.Repository
+namespace MangoDbCoreApi_5.Repository
 {
     public class BookRepository : IBookRepository
     {
