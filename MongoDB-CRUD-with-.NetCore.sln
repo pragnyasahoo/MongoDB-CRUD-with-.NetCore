@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoDB-CRUD-with-.NetCore", "MangoDbCoreApi_5.0\MongoDB-CRUD-with-.NetCore.csproj", "{92C85F44-6E54-46F9-B762-FCB6E2125CD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MangoDbCoreApi_5", "MangoDbCoreApi_5.0\MangoDbCoreApi_5.csproj", "{92C85F44-6E54-46F9-B762-FCB6E2125CD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDB-CRUD-with-.NetCore_NUnit.Test", "MongoDB-CRUD-with-.NetCore.Test\MongoDB-CRUD-with-.NetCore_NUnit.Test.csproj", "{71FE043A-2416-4805-857D-57A7581E2A2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoDB-CRUD-with-.NetCore_NUnit.Test", "MongoDB-CRUD-with-.NetCore.Test\MongoDB-CRUD-with-.NetCore_NUnit.Test.csproj", "{71FE043A-2416-4805-857D-57A7581E2A2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDB-CRUD-with-.NetCore_XUnit.Test", "MongoDB-CRUD-with-.NetCore_XUnit.Test\MongoDB-CRUD-with-.NetCore_XUnit.Test.csproj", "{DDC09BCA-9B3A-49D1-B0D9-6260B079190D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoDB-CRUD-with-.NetCore_XUnit.Test", "MongoDB-CRUD-with-.NetCore_XUnit.Test\MongoDB-CRUD-with-.NetCore_XUnit.Test.csproj", "{DDC09BCA-9B3A-49D1-B0D9-6260B079190D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

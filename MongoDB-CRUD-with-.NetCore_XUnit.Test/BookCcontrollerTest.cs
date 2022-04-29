@@ -12,19 +12,19 @@ namespace MongoDB_CRUD_with_.NetCore_XUnit.Test
     public class BookCcontrollerTest
     {
 
-        private readonly Mock<IBookServices> mockBookserive;
+        private readonly Mock<IBooksServices> mockBookserive;
 
         //private readonly Mock<IJsonSchemaValidator> mockBookserive;
 
 
-        private readonly BookController bookController;
+        private readonly BooksController bookController;
 
         private List<Book> book;
 
         public BookCcontrollerTest()
         {
-            mockBookserive = new Mock<IBookServices>();
-            bookController = new BookController(mockBookserive.Object);
+            mockBookserive = new Mock<IBooksServices>();
+            bookController = new BooksController(mockBookserive.Object);
             createBookStore();
         }
 
@@ -32,8 +32,7 @@ namespace MongoDB_CRUD_with_.NetCore_XUnit.Test
         public async void Get_ActionExecute_ReturnOkResultWithBookList()
         {
             mockBookserive.Setup(x => x.GetAllBookAsync()).ReturnsAsync(book);
-            var bookDetails = await bookController.GetAllBooks();            
-
+            var bookDetails = await bookController.GetAllBooks();         
             mockBookserive.Verify(x => x.GetAllBookAsync(), Times.Once);
             var resultType = Assert.IsType<OkObjectResult>(bookDetails);
             var resultModel = Assert.IsAssignableFrom<List<Book>>(resultType.Value);

@@ -338,3 +338,7 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+/MangoDbCoreApi_5.0/file
+/MangoDbCoreApi_5.0/d
+/MangoDbCoreApi_5.0/Dockerfile.original
+/out

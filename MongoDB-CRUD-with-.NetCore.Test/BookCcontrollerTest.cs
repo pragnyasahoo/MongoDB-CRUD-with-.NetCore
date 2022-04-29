@@ -13,18 +13,18 @@ namespace MongoDB_CRUD_with_.NetCore.Test
     public class BookCcontrollerTest
     {
 
-        private Mock<IBookServices> mockBookserive;
+        private Mock<IBooksServices> mockBookserive;
 
-        private BookController bookController;
+        private BooksController bookController;
 
         private List<Book> book; 
 
         [SetUp]
         public void Setup()
         {
-            mockBookserive = new Mock<IBookServices>();
-            bookController = new BookController(mockBookserive.Object);
-           book = createBookStore();
+            mockBookserive = new Mock<IBooksServices>();
+            bookController = new BooksController(mockBookserive.Object);
+            book = createBookStore();
         }
 
         [Test]

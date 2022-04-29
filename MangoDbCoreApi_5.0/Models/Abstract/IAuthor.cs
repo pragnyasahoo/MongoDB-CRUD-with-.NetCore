@@ -1,4 +1,6 @@
-﻿namespace MangoDbCoreApi_5.Models.Abstract
+﻿using System;
+
+namespace MangoDbCoreApi_5.Models.Abstract
 {
     public interface IAuthor
     {
@@ -9,5 +11,6 @@
         int Age { get; set; }
 
         string Location { get; set; }
+
     }
 }

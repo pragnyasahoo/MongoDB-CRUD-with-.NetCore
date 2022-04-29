@@ -1,4 +1,6 @@
-﻿namespace MangoDbCoreApi_5.Models.Abstract
+﻿using System;
+
+namespace MangoDbCoreApi_5.Models.Abstract
 {
     public interface IBook
     {
@@ -7,5 +9,7 @@
         public decimal BookPrice { get; set; }
         public string category { get; set; }
         public Author author { get; set; }
+
+        DateTime CreatedAt { get; }
     }
 }

@@ -1,44 +1,45 @@
 ﻿using MangoDbCoreApi_5.Models;
 using MangoDbCoreApi_5.Models.Abstract;
 using MangoDbCoreApi_5.Repository;
+using MangoDbCoreApi_5.Repository.BookDbContext;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace MangoDbCoreApi_5.Services.RepositoryService
+namespace MangoDbCoreApi_5.Services
 {
-    public class BookServices:IBookServices
+    public class BooksServices: IBooksServices
     { 
-        private readonly IBookRepository bookRepository;
-        public BookServices(IBookRepository bookRepositary)
+        private readonly IBooksRepository _bookRepository;
+        public BooksServices(IBooksRepository bookRepositary)
         { 
-            this.bookRepository = bookRepositary;
+            this._bookRepository = bookRepositary;
         }
 
         public Task<Book> CreateBookAsync(Book book)
         {
-           return bookRepository.CreateAsync(book);            
+           return _bookRepository.CreateAsync(book);            
         }
 
         public Task DeleteBookAsync(string id)
         {
-           return bookRepository.DeleteAsync(id);
+           return _bookRepository.DeleteAsync(id);
         }
 
         public Task<List<Book>> GetAllBookAsync()
         {
-            return bookRepository.GetAllBookAsync();
+            return _bookRepository.GetAllBookAsync();
         }
 
         public Task<Book> GetBookByIdAsync(string id)
         {
-            return bookRepository.GetByIdAsync(id);
+            return _bookRepository.GetByIdAsync(id);
         }
 
         public Task UpdateBookAsync(string id, Book book)
         {
-            return bookRepository.UpdateAsync(id,book);
+            return _bookRepository.UpdateAsync(id,book);
         }
     }
 }
