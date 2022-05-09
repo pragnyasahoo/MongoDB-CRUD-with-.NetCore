@@ -1,20 +1,15 @@
-using MangoDbCoreApi_5.Models;
-using MangoDbCoreApi_5.Models.Abstract;
-using MangoDbCoreApi_5.Repository;
+using MangoDbCoreApi_5.Models;  
 using MangoDbCoreApi_5.Repository.BookDbContext;
+using MangoDbCoreApi_5.Repository.DbContext;
 using MangoDbCoreApi_5.Repository.DbRepository;
-using MangoDbCoreApi_5.Repository.Repository.BookDbContext;
-using MangoDbCoreApi_5.Services;
-using MangoDbCoreApi_5.Utility;
-using MangoDbCoreApi_5.Utility.Implement;
+using MangoDbCoreApi_5.Repository.Repository.DbContext;
+using MangoDbCoreApi_5.Services; 
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting; 
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting; 
-using Microsoft.Extensions.Options;
-using Microsoft.OpenApi.Models;
-using MongoDB.Driver;
+using Microsoft.Extensions.Hosting;  
+using Microsoft.OpenApi.Models; 
 
 namespace MangoDbCoreApi_5
 {
@@ -42,7 +37,7 @@ namespace MangoDbCoreApi_5
 
 
             services.Configure<MangoDbSettings>(Configuration.GetSection("MangoDbSettings"));
-            services.AddScoped<IMongoBookDBContext, MongoBookDBContext>();
+            services.AddScoped<IMongoBookDBContext, MongoDBContext>();
             services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
             services.AddScoped<IBooksServices, BooksServices>();
             services.AddScoped<IBooksRepository, BooksRepository>();

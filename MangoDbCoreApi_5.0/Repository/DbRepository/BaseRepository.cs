@@ -1,5 +1,5 @@
 ﻿using MangoDbCoreApi_5.Models.Abstract;
-using MangoDbCoreApi_5.Repository.Repository.BookDbContext;
+using MangoDbCoreApi_5.Repository.Repository.DbContext;
 using Microsoft.Extensions.Configuration;
 using MongoDB.Bson;
 using MongoDB.Driver;

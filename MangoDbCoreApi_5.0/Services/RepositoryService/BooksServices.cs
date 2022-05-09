@@ -1,7 +1,7 @@
 ﻿using MangoDbCoreApi_5.Models;
 using MangoDbCoreApi_5.Models.Abstract;
 using MangoDbCoreApi_5.Repository;
-using MangoDbCoreApi_5.Repository.BookDbContext;
+using MangoDbCoreApi_5.Repository.DbContext;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using System.Collections.Generic;

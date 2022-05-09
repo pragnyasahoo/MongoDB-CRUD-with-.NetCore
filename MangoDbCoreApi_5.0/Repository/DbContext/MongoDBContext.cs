@@ -1,21 +1,21 @@
 ﻿using MangoDbCoreApi_5.Models;
 using MangoDbCoreApi_5.Models.Abstract;
 using MangoDbCoreApi_5.Models.ContentDbModel;
-using MangoDbCoreApi_5.Repository.Repository.BookDbContext;
+using MangoDbCoreApi_5.Repository.Repository.DbContext;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using System.Linq;
 
-namespace MangoDbCoreApi_5.Repository.BookDbContext
+namespace MangoDbCoreApi_5.Repository.DbContext
 {
-    public class MongoBookDBContext : IMongoBookDBContext
+    public class MongoDBContext : IMongoBookDBContext
     {
         private MongoClient _mongoClient { get; set; }
         public IClientSessionHandle Session { get; set; }
 
         private IMongoDatabase _db { get; set; }
 
-        public MongoBookDBContext(IOptions<MangoDbSettings> configuration)
+        public MongoDBContext(IOptions<MangoDbSettings> configuration)
         {
             _mongoClient = new MongoClient(configuration.Value.ConnectionString);
             _db = _mongoClient.GetDatabase(configuration.Value.DataBaseName); 
