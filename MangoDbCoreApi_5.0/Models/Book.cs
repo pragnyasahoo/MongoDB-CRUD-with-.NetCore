@@ -7,7 +7,7 @@ using System;
 namespace MangoDbCoreApi_5.Models
 {
 
-    [BsonCollection("Bookstore")]
+    [BsonCollection("Books")]
     public class Book: IBook
     { 
         [BsonId]

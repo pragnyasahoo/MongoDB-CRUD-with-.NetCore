@@ -17,7 +17,8 @@ namespace MangoDbCoreApi_5.Repository.DbRepository
         protected BaseRepository(IMongoBookDBContext context)
         {
             _mongoContext = context;
-            _dbCollection = context.GetCollection<TEntity>(typeof(TEntity).Name);
+           // _dbCollection = context.GetCollection<TEntity>(typeof(TEntity).Name); //if the collection name is same as model class
+            _dbCollection = context.GetCollection<TEntity>();
         }  
 
         public async Task<TEntity> CreateAsync(TEntity obj)

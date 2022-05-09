@@ -50,6 +50,7 @@ namespace MangoDbCoreApi_5
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "BookStore", Version = "v1" });
             });
+          
         }
             
 
