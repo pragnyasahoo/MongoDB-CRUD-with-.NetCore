@@ -2,7 +2,7 @@
 
 namespace MangoDbCoreApi_5.Repository.Repository.DbContext
 {
-     public interface IMongoBookDBContext
+     public interface IMongoDBContext
     {
         IMongoCollection<T> GetCollection<T>();
     }

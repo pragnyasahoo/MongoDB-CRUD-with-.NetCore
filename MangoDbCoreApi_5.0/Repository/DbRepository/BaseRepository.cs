@@ -11,10 +11,10 @@ namespace MangoDbCoreApi_5.Repository.DbRepository
 {
     public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class
     {
-        protected readonly IMongoBookDBContext _mongoContext;
+        protected readonly IMongoDBContext _mongoContext;
         protected IMongoCollection<TEntity> _dbCollection; 
 
-        protected BaseRepository(IMongoBookDBContext context)
+        protected BaseRepository(IMongoDBContext context)
         {
             _mongoContext = context;
            // _dbCollection = context.GetCollection<TEntity>(typeof(TEntity).Name); //if the collection name is same as model class

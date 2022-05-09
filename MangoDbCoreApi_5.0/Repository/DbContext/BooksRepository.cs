@@ -7,7 +7,7 @@ namespace MangoDbCoreApi_5.Repository.BookDbContext
 {
     public class BooksRepository : BaseRepository<Book>, IBooksRepository
     {
-         public BooksRepository(IMongoBookDBContext context) : base(context)
+         public BooksRepository(IMongoDBContext context) : base(context)
         {
         }
     }

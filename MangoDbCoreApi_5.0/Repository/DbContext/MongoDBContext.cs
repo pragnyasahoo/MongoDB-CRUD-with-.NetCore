@@ -8,7 +8,7 @@ using System.Linq;
 
 namespace MangoDbCoreApi_5.Repository.DbContext
 {
-    public class MongoDBContext : IMongoBookDBContext
+    public class MongoDBContext : IMongoDBContext
     {
         private MongoClient _mongoClient { get; set; }
         public IClientSessionHandle Session { get; set; }

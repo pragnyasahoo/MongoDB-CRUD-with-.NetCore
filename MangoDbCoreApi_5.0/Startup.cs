@@ -37,7 +37,7 @@ namespace MangoDbCoreApi_5
 
 
             services.Configure<MangoDbSettings>(Configuration.GetSection("MangoDbSettings"));
-            services.AddScoped<IMongoBookDBContext, MongoDBContext>();
+            services.AddScoped<IMongoDBContext, MongoDBContext>();
             services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
             services.AddScoped<IBooksServices, BooksServices>();
             services.AddScoped<IBooksRepository, BooksRepository>();
